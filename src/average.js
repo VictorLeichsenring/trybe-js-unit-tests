@@ -26,7 +26,7 @@ const average = (array) => {
     checkedItems.push(checkedItem);
   }  
   const sum = checkedItems.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  const result = sum / checkedItems.length;  
+  const result = Math.round(sum / checkedItems.length);  
   return result;
 };
 
