@@ -52,6 +52,4 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     expect(typeof menu.pay()).toBe('string'); // Corrigido para verificar se o tipo de retorno é uma string
     expect(parseFloat(menu.pay())).toBeCloseTo(expectedPrice, 2);
   });
-  
-  
 });
