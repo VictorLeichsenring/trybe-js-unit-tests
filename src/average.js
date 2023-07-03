@@ -19,15 +19,12 @@ const average = (array) => {
     if (typeof item !== 'number') {
       return undefined;
     }
-  }  
-  const checkedItems = [];
+  }
+  let sum = 0;
   for (const item of array) {
-    const checkedItem = Math.round(item);
-    checkedItems.push(checkedItem);
-  }  
-  const sum = checkedItems.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  const result = Math.round(sum / checkedItems.length);  
-  return result;
+    sum += Math.round(item);
+  }
+  return Math.round(sum / array.length);
 };
 
 console.log(average([1, 2, 3.4, 4.6, 1.3]));
